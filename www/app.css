@@ -1,0 +1,72 @@
+article {
+    display: table;
+}
+
+nav {
+    display: table-caption;
+    caption-side: bottom;
+}
+
+#bottom,
+#top {
+    font-size: 0.8em;
+    position: absolute;
+    right: 1em;
+    text-decoration: none;
+}
+
+#top {
+    color: green;
+    top: 0.5em;
+}
+
+@media(min-width: 480px) {
+    #bottom,
+    #top {
+        display: none;
+    }
+    article,
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+    nav li {
+        display: inline;
+    }
+    nav li a {
+        border-right: 1px solid #ad66d5;
+        border-bottom: none;
+        display: inline-block;
+        padding: 0 5px;
+        font-size: 1.4rem;
+    }
+    nav li:last-child a {
+        border-right: none;
+    }
+}
+
+@media (min-width: 600px) {
+    html {
+        background: #ad66d5;
+        height: 100%;
+    }
+
+    body {
+        width: 600px;
+        height: inherit;
+        background: url(./Gilbert.jpg) top right no-repeat,
+           linear-gradient(to bottom, #fff, #eee);
+    }
+
+    .main > p {
+        background-color: rgba(255,255,255, .3);
+    }
+    nav li a {
+        padding: 0 10px;
+        font-size: 1.5em;
+    }
+
+}
